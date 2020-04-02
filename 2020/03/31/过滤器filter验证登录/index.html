@@ -4,11 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java分页的实现方式, Nina">
-    <meta name="description" content="常见的分页实现方式
-使用List接口中subList(int startUndex, int endIndex)方法实现分页（简单易用，但效率低；当在无法按需批量获取数据时使用）
-
-subList(int fromIndex, int to">
+    <meta name="keywords" content="过滤器filter验证登录, Nina">
+    <meta name="description" content="什么是过滤器？在我们开发一个网站的时候，就拿一些购物商城为例：某些页面只能有登录完成后才能进行浏览。
+那么对于这样的访问权限的控制，该怎么实现呢？
+Servlet过滤器（Filter）就可以实现上述要求。过滤器位于服务器请求处理之前或服务器">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +15,7 @@ subList(int fromIndex, int to">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Java分页的实现方式 | Nina</title>
+    <title>过滤器filter验证登录 | Nina</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -306,12 +305,12 @@ subList(int fromIndex, int to">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java分页的实现方式</h1>
+                    <h1 class="description center-align post-title">过滤器filter验证登录</h1>
                 </div>
             </div>
         </div>
@@ -428,8 +427,8 @@ subList(int fromIndex, int to">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Java%E5%88%86%E9%A1%B5/">
-                                <span class="chip bg-color">Java分页</span>
+                            <a href="/tags/JavaWeb-Filter/">
+                                <span class="chip bg-color">JavaWeb Filter</span>
                             </a>
                         
                     </div>
@@ -444,7 +443,7 @@ subList(int fromIndex, int to">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-03-20
+                    2020-03-31
                 </div>
                 
 
@@ -458,14 +457,14 @@ subList(int fromIndex, int to">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    268
+                    594
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    2 Min
                 </div>
                 
 
@@ -481,27 +480,72 @@ subList(int fromIndex, int to">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="常见的分页实现方式"><a href="#常见的分页实现方式" class="headerlink" title="常见的分页实现方式"></a>常见的分页实现方式</h1><ul>
-<li><p>使用List接口中subList(int startUndex, int endIndex)方法实现分页（简单易用，但效率低；当在无法按需批量获取数据时使用）</p>
-<ul>
-<li>subList(int fromIndex, int toIndex) 返回列表数据指定的fromIndex（包括）和toIndex（不包括）之间的部分试图</li>
-</ul>
-</li>
-<li><p>直接使用数据库SQL语句实现分页（简单直接效率，但数据库的兼容性差；在不要求数据库兼容时使用）</p>
-<ul>
-<li>利用数据库自带的分页语法，使用分页语句，获取分页数据（例如mysql数据库使用limit关键字，Oracle中使用rownum关键字等）</li>
-<li>MySql查询语句（查找学生表中的前十条数据）——select * form student limit 0,10</li>
-</ul>
-</li>
-<li><p>使用hibernate等框架实现跨数据库的分页（面向对象，兼容性强；但复杂插叙性能低；用于兼容不同数据库）</p>
-<ul>
-<li>创建Query或者Criteria对象，查询时，设置firstResult和maxResults属性</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String hql &#x3D; &quot;from Student&quot;;</span><br><span class="line">Quert q &#x3D; session.createQuery(hql);</span><br><span class="line">q.setFirstResult(0);</span><br><span class="line">q.setMaxResults(10);</span><br><span class="line">List list &#x3D; q.list;</span><br></pre></td></tr></table></figure>
+                <h3 id="什么是过滤器？"><a href="#什么是过滤器？" class="headerlink" title="什么是过滤器？"></a>什么是过滤器？</h3><p>在我们开发一个网站的时候，就拿一些购物商城为例：某些页面只能有登录完成后才能进行浏览。</p>
+<p>那么对于这样的访问权限的控制，该怎么实现呢？</p>
+<p>Servlet过滤器（Filter）就可以实现上述要求。过滤器位于服务器请求处理之前或服务器响应请求之前。也就是说它可以过滤浏览器对服务器的请求，也可以过滤服务器对浏览器的响应。</p>
+<h3 id="代码实现："><a href="#代码实现：" class="headerlink" title="代码实现："></a>代码实现：</h3><p>在学习filter以前，我们总是在接受参数的每个页面或servlet都需要使用<strong>request.setCharacterEncoding(“utf-8”);</strong>来解决中文乱码问题。</p>
+<p>现在我们使用filter来进行统一处理：</p>
+<p>编写SetCharacterEncodingFilter</p>
+<pre><code>@WebFilter(filterName = &quot;SetCharacterEncodingFilter&quot;,urlPatterns = {&quot;/*&quot;},
+initParams = {@WebInitParam(name = &quot;encoding&quot;,value = &quot;utf-8&quot;)} 
+)
+public class SetCharacterEncodingFilter implements Filter {
+private static String encoding;
+public SetCharacterEncodingFilter() {
 
-<p>未完待续…….</p>
-</li>
-</ul>
+}
+
+public void destroy() {
+
+}
+
+public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+
+    request.setCharacterEncoding(encoding);
+    chain.doFilter(request, response);
+}
+public void init(FilterConfig fConfig) throws ServletException {
+
+    encoding = fConfig.getInitParameter(&quot;encoding&quot;);
+}
+
+}</code></pre><p>重头戏来了！！！</p>
+<h3 id="用filter登录验证"><a href="#用filter登录验证" class="headerlink" title="用filter登录验证"></a>用filter登录验证</h3><p>LoginFilter里的doFilter()方法</p>
+<pre><code>public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+
+    HttpServletRequest req = (HttpServletRequest)request;
+    HttpServletResponse resp = (HttpServletResponse)response;
+    HttpSession session = req.getSession();
+
+    resp.setContentType(&quot;text/html;charset=utf-8&quot;);
+
+    PrintWriter out = resp.getWriter();
+    //得到用户请求的url
+    String request_url = req.getRequestURI();
+    System.out.println(&quot;request_url:&quot;+request_url);
+    //得到web应用程序的上下文地址
+    String  ctxPath = req.getContextPath();
+    System.out.println(ctxPath);
+    //去除上下文路径，得到剩余部分的路径
+    String uri = request_url.substring(ctxPath.length());
+    System.out.println(&quot;uri:&quot;+uri);
+
+    //登录页面或servlet不拦截
+    if(uri.contains(&quot;login.jsp&quot;) || uri.contains(&quot;LoginServlet&quot;)) {
+        chain.doFilter(request, response);
+    }else {
+        //判断用户是否登录
+        if(session.getAttribute(&quot;user&quot;)!=null) {    
+            //执行下一个过滤器
+            chain.doFilter(request, response);
+        }else {
+            out.println(&quot;您还没有登录，请先登录！三秒后回到登录页面。&quot;);
+            resp.setHeader(&quot;refresh&quot;, &quot;3;url=&quot;+ctxPath+&quot;/login.jsp&quot;);
+            return;
+        }
+    }
+}</code></pre><p>这里的重点主要是在取（过滤）地址上面。大家可以在开发工具中的控制台来查看一下这些地址，就能明白其中的关系。</p>
+<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>这样我们就完成了一个使用filter验证登录的效果，在这个项目里，你在地址栏输入的地址只能到达login.jsp与LoginServlet（没登录成功的情况下）；输入其他的地址都会提示你先行登陆。</p>
 
             </div>
             <hr/>
@@ -527,7 +571,7 @@ subList(int fromIndex, int to">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/03/20/Java%E5%88%86%E9%A1%B5%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/">http://yoursite.com/2020/03/20/Java%E5%88%86%E9%A1%B5%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/</a>
+                    <a href="http://yoursite.com/2020/03/31/%E8%BF%87%E6%BB%A4%E5%99%A8filter%E9%AA%8C%E8%AF%81%E7%99%BB%E5%BD%95/">http://yoursite.com/2020/03/31/%E8%BF%87%E6%BB%A4%E5%99%A8filter%E9%AA%8C%E8%AF%81%E7%99%BB%E5%BD%95/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -565,8 +609,8 @@ subList(int fromIndex, int to">
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Java%E5%88%86%E9%A1%B5/">
-                                    <span class="chip bg-color">Java分页</span>
+                                <a href="/tags/JavaWeb-Filter/">
+                                    <span class="chip bg-color">JavaWeb Filter</span>
                                 </a>
                             
                         </div>
@@ -732,80 +776,31 @@ subList(int fromIndex, int to">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2020/03/29/c3p0%E8%BF%9E%E6%8E%A5%E6%B1%A0%E4%B8%8EDBUtil%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8/">
+                <a href="/2020/03/31/%E8%BF%87%E6%BB%A4%E5%99%A8filter%E9%AA%8C%E8%AF%81%E7%99%BB%E5%BD%95/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="c3p0连接池与DBUtil工具应用">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="过滤器filter验证登录">
                         
-                        <span class="card-title">c3p0连接池与DBUtil工具应用</span>
+                        <span class="card-title">过滤器filter验证登录</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            数据库连接池的作用：转载：https://www.cnblogs.com/tangdrogn/p/8177754.html
-使用c3p0连接池需要以下步骤：
-下载c3p0-0.9.2.1.jar 包
-
-配置c3p0-config.xml文件
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-29
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Nina-Su
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93-c3p0/">
-                        <span class="chip bg-color">数据库 c3p0</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/03/20/Java%E5%88%86%E9%A1%B5%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Java分页的实现方式">
-                        
-                        <span class="card-title">Java分页的实现方式</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            常见的分页实现方式
-使用List接口中subList(int startUndex, int endIndex)方法实现分页（简单易用，但效率低；当在无法按需批量获取数据时使用）
-
-subList(int fromIndex, int to
+                            什么是过滤器？在我们开发一个网站的时候，就拿一些购物商城为例：某些页面只能有登录完成后才能进行浏览。
+那么对于这样的访问权限的控制，该怎么实现呢？
+Servlet过滤器（Filter）就可以实现上述要求。过滤器位于服务器请求处理之前或服务器
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-31
                             </span>
                         <span class="publish-author">
                             
@@ -819,8 +814,55 @@ subList(int fromIndex, int to
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java%E5%88%86%E9%A1%B5/">
-                        <span class="chip bg-color">Java分页</span>
+                    <a href="/tags/JavaWeb-Filter/">
+                        <span class="chip bg-color">JavaWeb Filter</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/03/30/HTTP%E5%8D%8F%E8%AE%AE/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="HTTP协议">
+                        
+                        <span class="card-title">HTTP协议</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            什么是HTTP协议？HTTP 超文本传输协议 Hyper Text Transfer Protocol  
+当我们在浏览器的地址栏输入一个地址的时候，就能够访问服务器的某个页面  
+ 这个过程本身就是两个应用程序之间的交互，一个应用程序是浏
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Nina-Su
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/http/">
+                        <span class="chip bg-color">http</span>
                     </a>
                     
                 </div>
