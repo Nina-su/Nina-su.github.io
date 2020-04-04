@@ -4,12 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="c3p0连接池与DBUtil工具应用, Nina">
-    <meta name="description" content="数据库连接池的作用：转载：https://www.cnblogs.com/tangdrogn/p/8177754.html
-使用c3p0连接池需要以下步骤：
-下载c3p0-0.9.2.1.jar 包
-
-配置c3p0-config.xml文件">
+    <meta name="keywords" content="HashMap的使用, Nina">
+    <meta name="description" content="Java中HashMap的工作原理是什么？hashMap是基于哈希表的Map接口的实现。
+Java中的hashMap是以键值对（key-value）的形式存储元素的。HashMap需要一个hash函数，它使用hashCode()和equal">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>c3p0连接池与DBUtil工具应用 | Nina</title>
+    <title>HashMap的使用 | Nina</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -307,12 +304,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">c3p0连接池与DBUtil工具应用</h1>
+                    <h1 class="description center-align post-title">HashMap的使用</h1>
                 </div>
             </div>
         </div>
@@ -429,8 +426,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93-c3p0/">
-                                <span class="chip bg-color">数据库 c3p0</span>
+                            <a href="/tags/Java-HashMap/">
+                                <span class="chip bg-color">Java HashMap</span>
                             </a>
                         
                     </div>
@@ -445,28 +442,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-03-29
+                    2020-04-04
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2020-04-02
+                    2020-04-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1.1k
+                    466
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    5 Min
+                    1 Min
                 </div>
                 
 
@@ -482,206 +479,73 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="数据库连接池的作用："><a href="#数据库连接池的作用：" class="headerlink" title="数据库连接池的作用："></a>数据库连接池的作用：</h1><p>转载：<a href="https://www.cnblogs.com/tangdrogn/p/8177754.html" target="_blank" rel="noopener">https://www.cnblogs.com/tangdrogn/p/8177754.html</a></p>
-<h3 id="使用c3p0连接池需要以下步骤："><a href="#使用c3p0连接池需要以下步骤：" class="headerlink" title="使用c3p0连接池需要以下步骤："></a>使用c3p0连接池需要以下步骤：</h3><ol>
-<li><p>下载c3p0-0.9.2.1.jar 包</p>
-</li>
-<li><p>配置c3p0-config.xml文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;UTF-8&quot;?&gt;</span><br><span class="line"></span><br><span class="line">&lt;c3p0-config&gt;</span><br><span class="line">&lt;default-config&gt;</span><br><span class="line">&lt;!-- 指定连接数据源的基本属性 这是使用默认的--&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 最大连接数 --&gt;</span><br><span class="line">　　&lt;property name&#x3D;&quot;user&quot;&gt;perfume_reader&lt;&#x2F;property&gt;</span><br><span class="line">　　&lt;property name&#x3D;&quot;password&quot;&gt;perfume@123&lt;&#x2F;property&gt;</span><br><span class="line">　　&lt;property name&#x3D;&quot;driverClass&quot;&gt;com.mysql.jdbc.Driver&lt;&#x2F;property&gt;</span><br><span class="line">　　&lt;property name&#x3D;&quot;jdbcUrl&quot;&gt;jdbc:mysql:&#x2F;&#x2F;106.14.209.83:3306&#x2F;perfume&lt;&#x2F;property&gt;</span><br><span class="line">　　&lt;!-- 每隔120秒检查连接池里的空闲连接，单位是秒--&gt;</span><br><span class="line">　　&lt;property name&#x3D;&quot;acquireIncrement&quot;&gt;5&lt;&#x2F;property&gt;</span><br><span class="line">　　&lt;!-- 若数据库中连接数不足时，一次向数据库服务中申请多少个连接 --&gt;</span><br><span class="line">	&lt;property name&#x3D;&quot;initialPoolSize&quot;&gt;20&lt;&#x2F;property&gt;</span><br><span class="line">	&lt;!-- 初始化数据库连接池连接数量 --&gt;</span><br><span class="line">　　&lt;property name&#x3D;&quot;minPoolSize&quot;&gt;2&lt;&#x2F;property&gt;</span><br><span class="line">　　&lt;!--最小的数据库连接数 --&gt;</span><br><span class="line">　　&lt;property name&#x3D;&quot;maxPoolSize&quot;&gt;40&lt;&#x2F;property&gt;</span><br><span class="line">	&lt;!-- 最大的数据库连接数 --&gt;</span><br><span class="line">&lt;&#x2F;default-config&gt;</span><br><span class="line">&lt;&#x2F;c3p0-config&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
+                <h3 id="Java中HashMap的工作原理是什么？"><a href="#Java中HashMap的工作原理是什么？" class="headerlink" title="Java中HashMap的工作原理是什么？"></a>Java中HashMap的工作原理是什么？</h3><p>hashMap是基于哈希表的Map接口的实现。</p>
+<p>Java中的hashMap是以键值对（key-value）的形式存储元素的。HashMap需要一个hash函数，它使用hashCode()和equals()方法来向集合/从集合添加和检索元素。当调用put()方法的时候，HashMap会计算key的hash值，然后把键值对存储在集合中合适的索引上。如果key已经存在了，value会被更新成新值。HashMap的一些重要的特性是它的容量(capacity)，负载因子(load factor)和扩容极限(threshold resizing)。 </p>
+<p>HashMap 类与 Hashtable 大致相同，但有一些不同点：</p>
+<ol>
+<li>hashMap去掉了HashTable 的contains方法，但是加上了containsValue（）和containsKey（）方法。 </li>
+<li>hashTable同步的，而HashMap是非同步的，效率上比hashTable要高。</li>
+<li>hashMap允许空键值，而hashTable不允许 </li>
 </ol>
-<h3 id="修改DBHelper-java"><a href="#修改DBHelper-java" class="headerlink" title="修改DBHelper.java"></a>修改DBHelper.java</h3><pre><code>package util;
+<h3 id="HashMap的常用方法"><a href="#HashMap的常用方法" class="headerlink" title="HashMap的常用方法"></a>HashMap的常用方法</h3><p>在HashMap中通过get()来获取value，通过put()来插入value，ContainsKey()则用来检验对象是否已经存在。可以看出，和ArrayList的操作相比，HashMap除了通过key索引其内容之外，别的方面差异并不大。 </p>
+<p>以一个购物的增删来举例：</p>
+<pre><code>//添加进购物车
+public boolean addToCart(int id,int quantity) {
 
-import com.mchange.v2.c3p0.ComboPooledDataSource;
+        CartItem item = new CartItem();
 
-import javax.sql.DataSource;
+        item.setId(id);
 
-import java.sql.Connection;
+        item.setQuantity(quantity);
 
-import java.sql.PreparedStatement;
+        //....还有一些其他的属性从数据库中查出
 
-import java.sql.ResultSet;
+    if(cartItems.containsKey(item)) {
 
-import java.sql.SQLException;
+        cartItems.put(item.getQuantity()+quantity,item);
+    }else {
+        cartItems.put(quantity, item);
+    }
 
-public class DBHelper {
+    //重新计算购物车总数量与总金额
+    refreshTotalCountAndTotalMoney();
 
-//负责建立与数据库的连接,当在应用程序中访问数据库时 
-不必编写连接数据库的代码，直接引用DataSource获取数据库的连接对象即可。用于获取操作数据Connection对象。
-private  static DataSource dataSource;
-static {
-    dataSource = new ComboPooledDataSource();
+    return true; 
+
+}</code></pre><p>HashMap中迭代器的使用：</p>
+<p>附有remove()使用</p>
+<pre><code>//计算总金额与总数量
+
+public void refreshTotalCountAndTotalMoney() {
+
+        double totalMoney = 0.0;
+
+        int totalCount = 0;
+
+        Collection&lt;CartItem&gt; list = cartItems.values();//获得    所有值的集合
+
+        Iterator&lt;CartItem&gt; iterator = list.iterator();
+
+        while (iterator.hasNext()) {
+
+            CartItem item = new CartItem();
+
+            totalMoney += item.getPrice()*item.getQuantity();
+
+            totalCount += item.getQuantity();    
+
+    }
+    setTotalCount(totalCount);
+    setTotalMoney(totalMoney);
 }
-public static Connection getConnection() {
-    Connection connection = null;
-    try {
-        connection = dataSource.getConnection();
 
-    } catch (SQLException e) {
-        e.printStackTrace();
-    }
-    return connection;
-}
-//测试数据库是否正常连接
-public static void main(String[] args) {
-    try {
-        Connection conn =DBHelper.getConnection();
-        if(conn!=null) {
-            System.out.println(&quot;数据库连接正常&quot;);
-        }else {
-            System.out.println(&quot;数据库连接异常&quot;);
-        }
-    } catch (Exception e) {
-        e.printStackTrace();
-        // TODO: handle exception
-    }
 
-}
-}</code></pre><h3 id="修改商品业务逻辑类的代码ItemsDAO-java"><a href="#修改商品业务逻辑类的代码ItemsDAO-java" class="headerlink" title="修改商品业务逻辑类的代码ItemsDAO.java"></a>修改商品业务逻辑类的代码ItemsDAO.java</h3><p>从以下代码里我们可以看到传统的将每个属性依次添加到javaBean当中的代码被简化，这是是使用了 <u>apache的DBUtils</u>数据库工具类实现，记得下载<u>commons-dbutils-1.7.jar</u> 包。</p>
-<pre><code>package dao;
-
-import java.sql.Connection;
-
-import java.sql.PreparedStatement;
-
-import java.sql.ResultSet;
-
-import java.sql.SQLException;
-
-import java.util.ArrayList;
-
-import org.apache.commons.dbutils.QueryRunner;
-
-import org.apache.commons.dbutils.handlers.BeanHandler;
-
-import org.apache.commons.dbutils.handlers.BeanListHandler;
-
-import com.sun.org.apache.bcel.internal.generic.NEW;
-
-import entity.Items;
-
-import util.DBHelper;
-
-//商品的业务逻辑类
-
-public class ItemsDAO {
-
-//获得所有的商品信息
-public ArrayList&lt;Items&gt; getAllItems()
-{
-    Connection conn=null;
-    //PreparedStatement stmt=null;
-    //ResultSet re=null;
-    ArrayList&lt;Items&gt; list=new ArrayList&lt;Items&gt;();//商品集合
-
-    try
-    {
-        conn=DBHelper.getConnection();
-        String sql=&quot;select * from perfume&quot;;  //SQL语句
-        //stmt=conn.prepareStatement(sql);
-        //re=stmt.executeQuery();
-         Object[] params = {};
-        QueryRunner queryRunner = new QueryRunner();
-        list = (ArrayList&lt;Items&gt;)queryRunner.query(conn, sql, new BeanListHandler&lt;Items&gt;(Items.class), params);
-        /*while(re.next())
-        {
-            Items item=new Items();
-            item.setId(re.getInt(&quot;Id&quot;));
-            item.setName(re.getString(&quot;Name&quot;));
-            item.setEngname(re.getString(&quot;EngName&quot;));
-            item.setBrand(re.getString(&quot;Brand&quot;));
-            item.setStock(re.getInt(&quot;Stock&quot;));
-            item.setPrice(re.getInt(&quot;Price&quot;));
-            item.setPhoto(re.getString(&quot;Photo&quot;));
-            item.setDesc(re.getString(&quot;Desc&quot;));
-            list.add(item); //把一个商品加入集合
-        }*/
-        return list; //返回集合
-    }
-    catch (SQLException e) {
-        e.printStackTrace();
-
-    }
-    finally 
-    {
-        //释放数据集对象
-        try {
-                conn.close();
-            } 
-        catch (SQLException e) {
-                e.printStackTrace();
-        }
-    }
-
-    return list;
-
-}
-//根据商品编号获得商品资料
-public Items getItemsById(int id)
-{
-    Connection conn=null;
-    //PreparedStatement stmt=null;
-    //ResultSet re=null;
-    Items item = null;
-    try
-    {
-        conn=DBHelper.getConnection();
-        String sql=&quot;select * from perfume where id=?;&quot;;  //SQL语句
-        //stmt=conn.prepareStatement(sql);
-        //stmt.setInt(1, id);
-        //re=stmt.executeQuery();
-        Object[] params = {1};
-        QueryRunner queryRunner = new QueryRunner();
-        item = queryRunner.query(conn, sql, new BeanHandler&lt;Items&gt;(Items.class), params);
-        /*if(re.next())
-        {
-            Items item=new Items();
-            item.setId(re.getInt(&quot;id&quot;));
-            item.setName(re.getString(&quot;name&quot;));
-            item.setEngname(re.getString(&quot;engname&quot;));
-            item.setBrand(re.getString(&quot;brand&quot;));
-            item.setStock(re.getInt(&quot;stock&quot;));
-            item.setPrice(re.getInt(&quot;price&quot;));
-            item.setPhoto(re.getString(&quot;photo&quot;));
-            item.setDesc(re.getString(&quot;desc&quot;));
-            return item;
-        }
-        else 
-        {
-            return null;
-        }*/
-    }
-    catch (SQLException e) {
-        e.printStackTrace();
-
-    }
-    finally 
-    {
-        //释放数据集对象
-
-            try {
-                //re.close();
-                //re=null;
-                conn.close();
-            } 
-            catch (SQLException e) {
-                e.printStackTrace();
-            }
-
-    }
-    return item;
-}
-}</code></pre><p>​</p>
-<p>DBUtils工具的使用：</p>
-<p>转载：<a href="https://www.jianshu.com/p/1dea2bf9e80c" target="_blank" rel="noopener">https://www.jianshu.com/p/1dea2bf9e80c</a></p>
-<p>这里我们主要是运用QueryRunner实现查询操作：</p>
-<ul>
-<li>BeanHandler：将结果集中第一条记录封装到一个指定的javaBean中。</li>
-<li>BeanListHandler：将结果集中每一条记录封装到指定的javaBean中，将这些javaBean在封装到List集合中</li>
-</ul>
+//删除 购物项的方法
+public boolean removeFromCart(int id) {
+    cartItems.remove(id);
+    refreshTotalCountAndTotalMoney();
+    return true;
+}</code></pre><h5 id="还有iterator的使用参考："><a href="#还有iterator的使用参考：" class="headerlink" title="还有iterator的使用参考："></a>还有iterator的使用参考：</h5><p><a href="https://blog.csdn.net/Huangxu_MIKU/article/details/88832067" target="_blank" rel="noopener">https://blog.csdn.net/Huangxu_MIKU/article/details/88832067</a></p>
 
             </div>
             <hr/>
@@ -707,7 +571,7 @@ public Items getItemsById(int id)
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/03/29/c3p0%E8%BF%9E%E6%8E%A5%E6%B1%A0%E4%B8%8EDBUtil%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8/">http://yoursite.com/2020/03/29/c3p0%E8%BF%9E%E6%8E%A5%E6%B1%A0%E4%B8%8EDBUtil%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8/</a>
+                    <a href="http://yoursite.com/2020/04/04/HashMap%E7%9A%84%E4%BD%BF%E7%94%A8/">http://yoursite.com/2020/04/04/HashMap%E7%9A%84%E4%BD%BF%E7%94%A8/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -745,8 +609,8 @@ public Items getItemsById(int id)
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93-c3p0/">
-                                    <span class="chip bg-color">数据库 c3p0</span>
+                                <a href="/tags/Java-HashMap/">
+                                    <span class="chip bg-color">Java HashMap</span>
                                 </a>
                             
                         </div>
@@ -912,31 +776,31 @@ public Items getItemsById(int id)
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2020/03/30/HTTP%E5%8D%8F%E8%AE%AE/">
+                <a href="/2020/04/04/HashMap%E7%9A%84%E4%BD%BF%E7%94%A8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="HTTP协议">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="HashMap的使用">
                         
-                        <span class="card-title">HTTP协议</span>
+                        <span class="card-title">HashMap的使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            什么是HTTP协议？HTTP 超文本传输协议 Hyper Text Transfer Protocol  
-当我们在浏览器的地址栏输入一个地址的时候，就能够访问服务器的某个页面  
- 这个过程本身就是两个应用程序之间的交互，一个应用程序是浏
+                            Java中HashMap的工作原理是什么？hashMap是基于哈希表的Map接口的实现。
+Java中的hashMap是以键值对（key-value）的形式存储元素的。HashMap需要一个hash函数，它使用hashCode()和equal
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-30
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -945,11 +809,12 @@ public Items getItemsById(int id)
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/http/">
-                        <span class="chip bg-color">http</span>
+                    <a href="/tags/Java-HashMap/">
+                        <span class="chip bg-color">Java HashMap</span>
                     </a>
                     
                 </div>
@@ -963,27 +828,26 @@ public Items getItemsById(int id)
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/20/Java%E5%88%86%E9%A1%B5%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/">
+                <a href="/2020/03/31/%E8%BF%87%E6%BB%A4%E5%99%A8filter%E9%AA%8C%E8%AF%81%E7%99%BB%E5%BD%95/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Java分页的实现方式">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="过滤器filter验证登录">
                         
-                        <span class="card-title">Java分页的实现方式</span>
+                        <span class="card-title">过滤器filter验证登录</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            常见的分页实现方式
-使用List接口中subList(int startUndex, int endIndex)方法实现分页（简单易用，但效率低；当在无法按需批量获取数据时使用）
-
-subList(int fromIndex, int to
+                            什么是过滤器？在我们开发一个网站的时候，就拿一些购物商城为例：某些页面只能有登录完成后才能进行浏览。
+那么对于这样的访问权限的控制，该怎么实现呢？
+Servlet过滤器（Filter）就可以实现上述要求。过滤器位于服务器请求处理之前或服务器
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-31
                             </span>
                         <span class="publish-author">
                             
@@ -996,8 +860,8 @@ subList(int fromIndex, int to
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java%E5%88%86%E9%A1%B5/">
-                        <span class="chip bg-color">Java分页</span>
+                    <a href="/tags/JavaWeb-Filter/">
+                        <span class="chip bg-color">JavaWeb Filter</span>
                     </a>
                     
                 </div>
