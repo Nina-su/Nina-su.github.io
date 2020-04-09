@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="HashMap的使用, Nina">
+    <meta name="keywords" content="HashMap的使用（初解）, Nina">
     <meta name="description" content="Java中HashMap的工作原理是什么？hashMap是基于哈希表的Map接口的实现。
 Java中的hashMap是以键值对（key-value）的形式存储元素的。HashMap需要一个hash函数，它使用hashCode()和equal">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +14,7 @@ Java中的hashMap是以键值对（key-value）的形式存储元素的。HashMa
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>HashMap的使用 | Nina</title>
+    <title>HashMap的使用（初解） | Nina</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -304,12 +304,12 @@ Java中的hashMap是以键值对（key-value）的形式存储元素的。HashMa
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">HashMap的使用</h1>
+                    <h1 class="description center-align post-title">HashMap的使用（初解）</h1>
                 </div>
             </div>
         </div>
@@ -449,14 +449,14 @@ Java中的hashMap是以键值对（key-value）的形式存储元素的。HashMa
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2020-04-04
+                    2020-04-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    466
+                    468
                 </div>
                 
 
@@ -487,7 +487,7 @@ Java中的hashMap是以键值对（key-value）的形式存储元素的。HashMa
 <li>hashTable同步的，而HashMap是非同步的，效率上比hashTable要高。</li>
 <li>hashMap允许空键值，而hashTable不允许 </li>
 </ol>
-<h3 id="HashMap的常用方法"><a href="#HashMap的常用方法" class="headerlink" title="HashMap的常用方法"></a>HashMap的常用方法</h3><p>在HashMap中通过get()来获取value，通过put()来插入value，ContainsKey()则用来检验对象是否已经存在。可以看出，和ArrayList的操作相比，HashMap除了通过key索引其内容之外，别的方面差异并不大。 </p>
+<h3 id="HashMap的简单常用方法"><a href="#HashMap的简单常用方法" class="headerlink" title="HashMap的简单常用方法"></a>HashMap的简单常用方法</h3><p>在HashMap中通过get()来获取value，通过put()来插入value，ContainsKey()则用来检验对象是否已经存在。可以看出，和ArrayList的操作相比，HashMap除了通过key索引其内容之外，别的方面差异并不大。 </p>
 <p>以一个购物的增删来举例：</p>
 <pre><code>//添加进购物车
 public boolean addToCart(int id,int quantity) {
@@ -537,15 +537,8 @@ public void refreshTotalCountAndTotalMoney() {
     }
     setTotalCount(totalCount);
     setTotalMoney(totalMoney);
-}
-
-
-//删除 购物项的方法
-public boolean removeFromCart(int id) {
-    cartItems.remove(id);
-    refreshTotalCountAndTotalMoney();
-    return true;
-}</code></pre><h5 id="还有iterator的使用参考："><a href="#还有iterator的使用参考：" class="headerlink" title="还有iterator的使用参考："></a>还有iterator的使用参考：</h5><p><a href="https://blog.csdn.net/Huangxu_MIKU/article/details/88832067" target="_blank" rel="noopener">https://blog.csdn.net/Huangxu_MIKU/article/details/88832067</a></p>
+}</code></pre><p>​<br>        //删除 购物项的方法<br>        public boolean removeFromCart(int id) {<br>            cartItems.remove(id);<br>            refreshTotalCountAndTotalMoney();<br>            return true;<br>        }</p>
+<h5 id="还有iterator的使用参考："><a href="#还有iterator的使用参考：" class="headerlink" title="还有iterator的使用参考："></a>还有iterator的使用参考：</h5><p><a href="https://blog.csdn.net/Huangxu_MIKU/article/details/88832067" target="_blank" rel="noopener">https://blog.csdn.net/Huangxu_MIKU/article/details/88832067</a></p>
 
             </div>
             <hr/>
@@ -571,7 +564,7 @@ public boolean removeFromCart(int id) {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/04/04/HashMap%E7%9A%84%E4%BD%BF%E7%94%A8/">http://yoursite.com/2020/04/04/HashMap%E7%9A%84%E4%BD%BF%E7%94%A8/</a>
+                    <a href="http://yoursite.com/2020/04/04/HashMap%E7%9A%84%E4%BD%BF%E7%94%A8%E5%88%9D%E8%A7%A3/">http://yoursite.com/2020/04/04/HashMap%E7%9A%84%E4%BD%BF%E7%94%A8%E5%88%9D%E8%A7%A3/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -776,31 +769,29 @@ public boolean removeFromCart(int id) {
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/04/04/HashMap%E7%9A%84%E4%BD%BF%E7%94%A8/">
+                <a href="/2020/04/09/MVC%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="HashMap的使用">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="MVC开发模式">
                         
-                        <span class="card-title">HashMap的使用</span>
+                        <span class="card-title">MVC开发模式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Java中HashMap的工作原理是什么？hashMap是基于哈希表的Map接口的实现。
-Java中的hashMap是以键值对（key-value）的形式存储元素的。HashMap需要一个hash函数，它使用hashCode()和equal
+                            什么是MVC？MVC全名是Model View Controller，是模型(model)-视图(view)-控制器(controller)的缩写，一种软件设计典范，用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑聚集到一个部件
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-04
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-09
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -809,12 +800,11 @@ Java中的hashMap是以键值对（key-value）的形式存储元素的。HashMa
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java-HashMap/">
-                        <span class="chip bg-color">Java HashMap</span>
+                    <a href="/tags/mvc/">
+                        <span class="chip bg-color">mvc</span>
                     </a>
                     
                 </div>
@@ -1038,7 +1028,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">2.6k</span>&nbsp;字
+                class="white-color">3.4k</span>&nbsp;字
             
             
             

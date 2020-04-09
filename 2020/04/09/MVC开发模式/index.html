@@ -4,10 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="HTTP协议, Nina">
-    <meta name="description" content="什么是HTTP协议？HTTP 超文本传输协议 Hyper Text Transfer Protocol  
-当我们在浏览器的地址栏输入一个地址的时候，就能够访问服务器的某个页面  
- 这个过程本身就是两个应用程序之间的交互，一个应用程序是浏">
+    <meta name="keywords" content="MVC开发模式, Nina">
+    <meta name="description" content="什么是MVC？MVC全名是Model View Controller，是模型(model)-视图(view)-控制器(controller)的缩写，一种软件设计典范，用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑聚集到一个部件">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>HTTP协议 | Nina</title>
+    <title>MVC开发模式 | Nina</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,7 +308,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">HTTP协议</h1>
+                    <h1 class="description center-align post-title">MVC开发模式</h1>
                 </div>
             </div>
         </div>
@@ -427,8 +425,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/http/">
-                                <span class="chip bg-color">http</span>
+                            <a href="/tags/mvc/">
+                                <span class="chip bg-color">mvc</span>
                             </a>
                         
                     </div>
@@ -443,28 +441,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-03-30
+                    2020-04-09
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2020-04-09
+                    2020-04-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    237
+                    708
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    2 Min
                 </div>
                 
 
@@ -480,15 +478,17 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="什么是HTTP协议？"><a href="#什么是HTTP协议？" class="headerlink" title="什么是HTTP协议？"></a>什么是HTTP协议？</h3><p>HTTP 超文本传输协议 Hyper Text Transfer Protocol  </p>
-<p>当我们在浏览器的地址栏输入一个地址的时候，就能够访问服务器的某个页面  </p>
-<p> 这个过程本身就是两个应用程序之间的交互，一个应用程序是浏览器，另一个应用程序是服务器。  </p>
-<h5 id="协议是什么？"><a href="#协议是什么？" class="headerlink" title="协议是什么？"></a>协议是什么？</h5><p> 协议就是不同的应用程序之间按照事先做好的约定进行的通信。 这样就能互相读懂对方的意思。  </p>
-<p>浏览器和WEB服务器之间，使用的就是一种叫做HTTP的协议。 这样是BS (Browser Server )架构模型的基础 </p>
-<h4 id="我们可以使用Chrome浏览器里的开发者工具来进行观察浏览器与服务器之间数据的具体内容。"><a href="#我们可以使用Chrome浏览器里的开发者工具来进行观察浏览器与服务器之间数据的具体内容。" class="headerlink" title="我们可以使用Chrome浏览器里的开发者工具来进行观察浏览器与服务器之间数据的具体内容。"></a>我们可以使用Chrome浏览器里的开发者工具来进行观察浏览器与服务器之间数据的具体内容。</h4><p>请求消息由 请求行，请求头部，空行，请求数据组成</p>
-<p>请求行</p>
-<p>请求头部</p>
-<p><img src="" alt="https://raw.githubusercontent.com/Nina-su/PicBed/master/blog_files/imgPicGo-Github-PicBed/无标题1.png"></p>
+                <h3 id="什么是MVC？"><a href="#什么是MVC？" class="headerlink" title="什么是MVC？"></a>什么是MVC？</h3><p>MVC全名是Model View Controller，是模型(model)-视图(view)-控制器(controller)的缩写，一种软件设计典范，用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑聚集到一个部件里面，在改进和个性化定制界面及用户交互的同时，不需要重新编写业务逻辑。MVC被独特的发展起来用于映射传统的输入、处理和输出功能在一个逻辑的图形化用户界面的结构中。 </p>
+<p>图解：</p>
+<p><img src="" alt="https://raw.githubusercontent.com/Nina-su/PicBed/master/blog_files/imgPicGo-Github-PicBed/mvc.png"></p>
+<p>Model层：其中包含了<strong><em>DAO</em></strong>与<strong><em>Service</em></strong>，Dao负责的是与数据库的交互，也就是进行数据的<strong>增删改查</strong>。Service是对Dao的<strong>进一步封装</strong>，因为Dao层只是进行增删改查的功能，Service把需要得到信息或者要进行的一些插入、删除、修改的元素告诉Dao，调用完Dao里的方法后返回一个结果集。（service也可称为业务逻辑层）</p>
+<p>Controller层：也就是控制层，是应用程序中处理用户交互的部分，与view层紧密联系。</p>
+<p>view层：那就是视图层，后台数据展现我们浏览器上。</p>
+<h3 id="MVC开发模式的一些优点："><a href="#MVC开发模式的一些优点：" class="headerlink" title="MVC开发模式的一些优点："></a>MVC开发模式的一些优点：</h3><h4 id="耦合性低"><a href="#耦合性低" class="headerlink" title="耦合性低"></a>耦合性低</h4><p>视图层和业务层分离，这样就允许更改视图层代码而不用重新编译模型和控制器代码，同样，一个应用的业务流程或者业务规则的改变只需要改动MVC的模型层即可。因为模型与控制器和视图相分离，所以很容易改变应用程序的数据层和业务规则。 </p>
+<h4 id="重用性高"><a href="#重用性高" class="headerlink" title="重用性高"></a>重用性高</h4><p>由于已经将数据和业务规则从表示层分开，所以可以最大化的重用代码了。 </p>
+<h4 id="可维护性高"><a href="#可维护性高" class="headerlink" title="可维护性高"></a><strong>可维护性高</strong></h4><p>分离视图层和业务逻辑层也使得WEB应用更易于维护和修改。 </p>
+<h4 id="部署快"><a href="#部署快" class="headerlink" title="部署快"></a><strong>部署快</strong></h4><p>使用MVC模式使开发时间得到相当大的缩减，它使程序员(Java开发人员)集中精力于业务逻辑，界面程序员(HTML和JSP开发人员)集中精力于表现形式上。 </p>
+<h4 id="有利软件工程化管理"><a href="#有利软件工程化管理" class="headerlink" title="有利软件工程化管理"></a><strong>有利软件工程化管理</strong></h4><p>由于不同的层各司其职，每一层不同的应用具有某些相同的特征，有利于通过工程化、工具化管理程序代码。控制器也提供了一个好处，就是可以使用控制器来联接不同的模型和视图去完成用户的需求，这样控制器可以为构造应用程序提供强有力的手段。给定一些可重用的模型和视图，控制器可以根据用户的需求选择模型进行处理，然后选择视图将处理结果显示给用户。 </p>
 
             </div>
             <hr/>
@@ -514,7 +514,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/03/30/HTTP%E5%8D%8F%E8%AE%AE/">http://yoursite.com/2020/03/30/HTTP%E5%8D%8F%E8%AE%AE/</a>
+                    <a href="http://yoursite.com/2020/04/09/MVC%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F/">http://yoursite.com/2020/04/09/MVC%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -552,8 +552,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/http/">
-                                    <span class="chip bg-color">http</span>
+                                <a href="/tags/mvc/">
+                                    <span class="chip bg-color">mvc</span>
                                 </a>
                             
                         </div>
@@ -719,31 +719,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2020/03/31/%E8%BF%87%E6%BB%A4%E5%99%A8filter%E9%AA%8C%E8%AF%81%E7%99%BB%E5%BD%95/">
+                <a href="/2020/04/09/MVC%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="过滤器filter验证登录">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="MVC开发模式">
                         
-                        <span class="card-title">过滤器filter验证登录</span>
+                        <span class="card-title">MVC开发模式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            什么是过滤器？在我们开发一个网站的时候，就拿一些购物商城为例：某些页面只能有登录完成后才能进行浏览。
-那么对于这样的访问权限的控制，该怎么实现呢？
-Servlet过滤器（Filter）就可以实现上述要求。过滤器位于服务器请求处理之前或服务器
+                            什么是MVC？MVC全名是Model View Controller，是模型(model)-视图(view)-控制器(controller)的缩写，一种软件设计典范，用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑聚集到一个部件
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-31
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -752,11 +751,12 @@ Servlet过滤器（Filter）就可以实现上述要求。过滤器位于服务�
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JavaWeb-Filter/">
-                        <span class="chip bg-color">JavaWeb Filter</span>
+                    <a href="/tags/mvc/">
+                        <span class="chip bg-color">mvc</span>
                     </a>
                     
                 </div>
@@ -770,28 +770,25 @@ Servlet过滤器（Filter）就可以实现上述要求。过滤器位于服务�
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/29/c3p0%E8%BF%9E%E6%8E%A5%E6%B1%A0%E4%B8%8EDBUtil%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8/">
+                <a href="/2020/04/04/HashMap%E7%9A%84%E4%BD%BF%E7%94%A8%E5%88%9D%E8%A7%A3/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="c3p0连接池与DBUtil工具应用">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="HashMap的使用（初解）">
                         
-                        <span class="card-title">c3p0连接池与DBUtil工具应用</span>
+                        <span class="card-title">HashMap的使用（初解）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            数据库连接池的作用：转载：https://www.cnblogs.com/tangdrogn/p/8177754.html
-使用c3p0连接池需要以下步骤：
-下载c3p0-0.9.2.1.jar 包
-
-配置c3p0-config.xml文件
+                            Java中HashMap的工作原理是什么？hashMap是基于哈希表的Map接口的实现。
+Java中的hashMap是以键值对（key-value）的形式存储元素的。HashMap需要一个hash函数，它使用hashCode()和equal
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-04
                             </span>
                         <span class="publish-author">
                             
@@ -804,8 +801,8 @@ Servlet过滤器（Filter）就可以实现上述要求。过滤器位于服务�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93-c3p0/">
-                        <span class="chip bg-color">数据库 c3p0</span>
+                    <a href="/tags/Java-HashMap/">
+                        <span class="chip bg-color">Java HashMap</span>
                     </a>
                     
                 </div>
