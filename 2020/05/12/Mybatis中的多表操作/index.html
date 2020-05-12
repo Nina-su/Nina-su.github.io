@@ -489,7 +489,8 @@
 <li><p>POOLED     采用传统的javax.sql.DataSource规范中的连接池，mybatis中有针对规范的实现</p>
 </li>
 <li><p>UNPOOLED 采用传统的获取连接的方式，虽然也实现Javax.sql.DataSource接口，但是并没有使用池的思想。</p>
-<p> . JNDI     采用服务器提供的JNDI技术实现，来获取DataSource对象，不同的服务器所能拿到DataSource是不一样。</p>
+</li>
+<li><p>JNDI     采用服务器提供的JNDI技术实现，来获取DataSource对象，不同的服务器所能拿到DataSource是不一样。</p>
 <p> 注意：如果不是web或者maven的war工程，是不能使用的。</p>
 </li>
 </ol>
