@@ -4,10 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="HTTP协议, Nina">
-    <meta name="description" content="什么是HTTP协议？HTTP 超文本传输协议 Hyper Text Transfer Protocol  
-当我们在浏览器的地址栏输入一个地址的时候，就能够访问服务器的某个页面  
- 这个过程本身就是两个应用程序之间的交互，一个应用程序是浏">
+    <meta name="keywords" content="Mybatis中的多表操作, Nina">
+    <meta name="description" content="当我们在开发过程中，涉及到数据库操作时，很多时候是对多张表的操作。
+（重要的其实是在怎么样用sql语句来实现查询）
+1、连接池：我们在实际开发中都会使用连接池。因为它可以减少我们获取连接所消耗的时间。
+2、mybatis中的连接池mybat">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>HTTP协议 | Nina</title>
+    <title>Mybatis中的多表操作 | Nina</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -305,12 +306,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">HTTP协议</h1>
+                    <h1 class="description center-align post-title">Mybatis中的多表操作</h1>
                 </div>
             </div>
         </div>
@@ -427,8 +428,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/http/">
-                                <span class="chip bg-color">http</span>
+                            <a href="/tags/Mybatis/">
+                                <span class="chip bg-color">Mybatis</span>
                             </a>
                         
                     </div>
@@ -443,28 +444,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-03-30
+                    2020-05-12
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2020-04-09
+                    2020-05-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    237
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    5 Min
                 </div>
                 
 
@@ -480,16 +481,223 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="什么是HTTP协议？"><a href="#什么是HTTP协议？" class="headerlink" title="什么是HTTP协议？"></a>什么是HTTP协议？</h3><p>HTTP 超文本传输协议 Hyper Text Transfer Protocol  </p>
-<p>当我们在浏览器的地址栏输入一个地址的时候，就能够访问服务器的某个页面  </p>
-<p> 这个过程本身就是两个应用程序之间的交互，一个应用程序是浏览器，另一个应用程序是服务器。  </p>
-<h5 id="协议是什么？"><a href="#协议是什么？" class="headerlink" title="协议是什么？"></a>协议是什么？</h5><p> 协议就是不同的应用程序之间按照事先做好的约定进行的通信。 这样就能互相读懂对方的意思。  </p>
-<p>浏览器和WEB服务器之间，使用的就是一种叫做HTTP的协议。 这样是BS (Browser Server )架构模型的基础 </p>
-<h4 id="我们可以使用Chrome浏览器里的开发者工具来进行观察浏览器与服务器之间数据的具体内容。"><a href="#我们可以使用Chrome浏览器里的开发者工具来进行观察浏览器与服务器之间数据的具体内容。" class="headerlink" title="我们可以使用Chrome浏览器里的开发者工具来进行观察浏览器与服务器之间数据的具体内容。"></a>我们可以使用Chrome浏览器里的开发者工具来进行观察浏览器与服务器之间数据的具体内容。</h4><p>请求消息由 请求行，请求头部，空行，请求数据组成</p>
-<p>请求行</p>
-<p>请求头部</p>
-<p><img src="" alt="https://raw.githubusercontent.com/Nina-su/PicBed/master/blog_files/imgPicGo-Github-PicBed/无标题1.png"></p>
+                <p>当我们在开发过程中，涉及到数据库操作时，很多时候是对多张表的操作。</p>
+<p><strong>（重要的其实是在怎么样用sql语句来实现查询）</strong></p>
+<h2 id="1、连接池："><a href="#1、连接池：" class="headerlink" title="1、连接池："></a>1、连接池：</h2><p>我们在实际开发中都会使用连接池。<br>因为它可以减少我们获取连接所消耗的时间。</p>
+<h2 id="2、mybatis中的连接池"><a href="#2、mybatis中的连接池" class="headerlink" title="2、mybatis中的连接池"></a>2、mybatis中的连接池</h2><h3 id="mybatis连接池提供了3种方式的配置："><a href="#mybatis连接池提供了3种方式的配置：" class="headerlink" title="mybatis连接池提供了3种方式的配置："></a>mybatis连接池提供了3种方式的配置：</h3><h4 id="配置的位置："><a href="#配置的位置：" class="headerlink" title="配置的位置："></a>配置的位置：</h4><p>主配置文件SqlMapConfig.xml中的dataSource标签，type属性就是表示采用何种连接池方式。</p>
+<h4 id="type属性的取值："><a href="#type属性的取值：" class="headerlink" title="type属性的取值："></a>type属性的取值：</h4><ol>
+<li><p>POOLED     采用传统的javax.sql.DataSource规范中的连接池，mybatis中有针对规范的实现</p>
+</li>
+<li><p>UNPOOLED 采用传统的获取连接的方式，虽然也实现Javax.sql.DataSource接口，但是并没有使用池的思想。</p>
+<p> . JNDI     采用服务器提供的JNDI技术实现，来获取DataSource对象，不同的服务器所能拿到DataSource是不一样。</p>
+<p> 注意：如果不是web或者maven的war工程，是不能使用的。</p>
+</li>
+</ol>
+<h2 id="3、mybatis中的多表操作"><a href="#3、mybatis中的多表操作" class="headerlink" title="3、mybatis中的多表操作"></a>3、mybatis中的多表操作</h2><h3 id="表之间的关系有几种："><a href="#表之间的关系有几种：" class="headerlink" title="表之间的关系有几种："></a>表之间的关系有几种：</h3><p>​        一对多<br>        多对一<br>        一对一<br>        多对多</p>
+<h4 id="举例："><a href="#举例：" class="headerlink" title="举例："></a>举例：</h4><p>用户和订单就是一对多<br>订单和用户就是多对一<br>            一个用户可以下多个订单<br>            多个订单属于同一个用户</p>
+<p>人和身份证号就是一对一</p>
+<p>​            一个人只能有一个身份证号<br>            一个身份证号只能属于一个人</p>
+<p>老师和学生之间就是多对多<br>            一个学生可以被多个老师教过<br>            一个老师可以交多个学生</p>
+<h4 id="特例："><a href="#特例：" class="headerlink" title="特例："></a>特例：</h4><p>如果拿出每一个订单，他都只能属于一个用户。<br>            所以Mybatis就把多对一看成了一对一。</p>
+<h3 id="mybatis中的多表查询（使用注解进行实现）："><a href="#mybatis中的多表查询（使用注解进行实现）：" class="headerlink" title="mybatis中的多表查询（使用注解进行实现）："></a>mybatis中的多表查询（使用注解进行实现）：</h3><h4 id="示例：用户和账户"><a href="#示例：用户和账户" class="headerlink" title="示例：用户和账户"></a>示例：用户和账户</h4><ol>
+<li>​        一个用户可以有多个账户<br> . ​        一个账户只能属于一个用户（多个账户也可以属于同一个用户）</li>
+</ol>
+<h5 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h5><ol>
+<li><p>建立两张表：用户表，账户表</p>
+<p>让用户表和账户表之间具备一对多的关系：需要使用外键在账户表中添加</p>
+</li>
+<li><p>建立两个实体类：用户实体类和账户实体类</p>
+<p>让用户和账户的实体类能体现出来一对多的关系</p>
+</li>
+<li><p>建立两个配置文件</p>
+<p>用户的配置文件</p>
+<p>账户的配置文件</p>
+</li>
+<li><p>实现配置：</p>
+<p>当我们查询用户时，可以同时得到用户下所包含的账户信息<br>当我们查询账户时，可以同时得到账户的所属用户信息</p>
+</li>
+</ol>
+<h4 id="代码实现："><a href="#代码实现：" class="headerlink" title="代码实现："></a>代码实现：</h4><h5 id="User-java"><a href="#User-java" class="headerlink" title="User.java"></a>User.java</h5><pre><code>public class User implements Serializable{
+private Integer userId;
+private String userName;
+private String userAddress;
+private String userSex;
+private Date userBirthday;
 
+//一对多关系映射：一个用户对应多个账户
+private List&lt;Account&gt; accounts;
+
+public List&lt;Account&gt; getAccounts() {
+    return accounts;
+}
+
+public void setAccounts(List&lt;Account&gt; accounts) {
+    this.accounts = accounts;
+}
+
+public Integer getUserId() {
+    return userId;
+}
+
+public void setUserId(Integer userId) {
+    this.userId = userId;
+}
+
+public String getUserName() {
+    return userName;
+}
+
+public void setUserName(String userName) {
+    this.userName = userName;
+}
+
+public String getUserAddress() {
+    return userAddress;
+}
+
+public void setUserAddress(String userAddress) {
+    this.userAddress = userAddress;
+}
+
+public String getUserSex() {
+    return userSex;
+}
+
+public void setUserSex(String userSex) {
+    this.userSex = userSex;
+}
+
+public Date getUserBirthday() {
+    return userBirthday;
+}
+
+public void setUserBirthday(Date userBirthday) {
+    this.userBirthday = userBirthday;
+}
+
+@Override
+public String toString() {
+    return &quot;User{&quot; +
+            &quot;userId=&quot; + userId +
+            &quot;, userName=&apos;&quot; + userName + &apos;\&apos;&apos; +
+            &quot;, userAddress=&apos;&quot; + userAddress + &apos;\&apos;&apos; +
+            &quot;, userSex=&apos;&quot; + userSex + &apos;\&apos;&apos; +
+            &quot;, userBirthday=&quot; + userBirthday +
+            &apos;}&apos;;
+}
+}</code></pre><p>​    </p>
+<h5 id="Account-java"><a href="#Account-java" class="headerlink" title="Account.java"></a>Account.java</h5><pre><code>public class Account implements Serializable {
+private Integer id;
+private Integer uid;
+private Double money;
+
+//多对一（mybatis中称之为一对一）的映射：一个账户只能属于一个用户
+private User user;
+
+public User getUser() {
+    return user;
+}
+
+public void setUser(User user) {
+    this.user = user;
+}
+
+public Integer getId() {
+    return id;
+}
+
+public void setId(Integer id) {
+    this.id = id;
+}
+
+public Integer getUid() {
+    return uid;
+}
+
+public void setUid(Integer uid) {
+    this.uid = uid;
+}
+
+public Double getMoney() {
+    return money;
+}
+
+public void setMoney(Double money) {
+    this.money = money;
+}
+
+@Override
+public String toString() {
+    return &quot;Account{&quot; +
+            &quot;id=&quot; + id +
+            &quot;, uid=&quot; + uid +
+            &quot;, money=&quot; + money +
+            &apos;}&apos;;
+}
+}</code></pre><h5 id="IUserDao-java"><a href="#IUserDao-java" class="headerlink" title="IUserDao.java"></a>IUserDao.java</h5><p><strong>(注意Results里参数的使用)</strong></p>
+<pre><code>@CacheNamespace(blocking = true)
+
+public interface IUserDao {
+
+/**
+ * 查询所有用户
+ * 一对多关系。来返回account的集合用many
+ * @return
+ */
+@Select(&quot;select * from user&quot;)
+@Results(id=&quot;userMap&quot;,value={
+        @Result(id=true,column = &quot;id&quot;,property = &quot;userId&quot;),
+        @Result(column = &quot;username&quot;,property = &quot;userName&quot;),
+        @Result(column = &quot;address&quot;,property = &quot;userAddress&quot;),
+        @Result(column = &quot;sex&quot;,property = &quot;userSex&quot;),
+        @Result(column = &quot;birthday&quot;,property = &quot;userBirthday&quot;),
+        @Result(property = &quot;accounts&quot;,column = &quot;id&quot;,
+                many = @Many(select = &quot;com.itheima.dao.IAccountDao.findAccountByUid&quot;,
+                            fetchType = FetchType.LAZY))
+})
+List&lt;User&gt; findAll();
+
+/**
+ * 根据id查询用户
+ * @param userId
+ * @return
+ */
+@Select(&quot;select * from user  where id=#{id} &quot;)
+@ResultMap(&quot;userMap&quot;)
+User findById(Integer userId);
+
+/**
+ * 根据用户名称模糊查询
+ * @param username
+ * @return
+ */
+@Select(&quot;select * from user where username like #{username} &quot;)
+@ResultMap(&quot;userMap&quot;)
+List&lt;User&gt; findUserByName(String username);
+}</code></pre><h5 id="IAccountDao-java"><a href="#IAccountDao-java" class="headerlink" title="IAccountDao.java"></a>IAccountDao.java</h5><p><strong>(注意Results里参数的使用)</strong></p>
+<pre><code>public interface IAccountDao {
+/**
+ * 查询所有账户，
+ * 一对一关系，用one来返回user值
+ * @return
+ */
+@Select(&quot;select * from account&quot;)
+@Results(id=&quot;accountMap&quot;,value = {
+        @Result(id=true,column = &quot;id&quot;,property = &quot;id&quot;),
+        @Result(column = &quot;uid&quot;,property = &quot;uid&quot;),
+        @Result(column = &quot;money&quot;,property = &quot;money&quot;),
+        @Result(property = &quot;user&quot;,column = &quot;uid&quot;,one=@One(select=&quot;com.itheima.dao.IUserDao.findById&quot;,fetchType= FetchType.EAGER))
+})
+List&lt;Account&gt; findAll();
+
+/**
+ * 根据用户id查询账户信息
+ * @param userId
+ * @return
+ */
+@Select(&quot;select * from account where uid = #{userId}&quot;)
+List&lt;Account&gt; findAccountByUid(Integer userId);
+}</code></pre>
             </div>
             <hr/>
 
@@ -514,7 +722,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/03/30/HTTP%E5%8D%8F%E8%AE%AE/">http://yoursite.com/2020/03/30/HTTP%E5%8D%8F%E8%AE%AE/</a>
+                    <a href="http://yoursite.com/2020/05/12/Mybatis%E4%B8%AD%E7%9A%84%E5%A4%9A%E8%A1%A8%E6%93%8D%E4%BD%9C/">http://yoursite.com/2020/05/12/Mybatis%E4%B8%AD%E7%9A%84%E5%A4%9A%E8%A1%A8%E6%93%8D%E4%BD%9C/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -552,8 +760,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/http/">
-                                    <span class="chip bg-color">http</span>
+                                <a href="/tags/Mybatis/">
+                                    <span class="chip bg-color">Mybatis</span>
                                 </a>
                             
                         </div>
@@ -719,31 +927,33 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2020/03/31/%E8%BF%87%E6%BB%A4%E5%99%A8filter%E9%AA%8C%E8%AF%81%E7%99%BB%E5%BD%95/">
+                <a href="/2020/05/12/Mybatis%E4%B8%AD%E7%9A%84%E5%A4%9A%E8%A1%A8%E6%93%8D%E4%BD%9C/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="过滤器filter验证登录">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Mybatis中的多表操作">
                         
-                        <span class="card-title">过滤器filter验证登录</span>
+                        <span class="card-title">Mybatis中的多表操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            什么是过滤器？在我们开发一个网站的时候，就拿一些购物商城为例：某些页面只能有登录完成后才能进行浏览。
-那么对于这样的访问权限的控制，该怎么实现呢？
-Servlet过滤器（Filter）就可以实现上述要求。过滤器位于服务器请求处理之前或服务器
+                            当我们在开发过程中，涉及到数据库操作时，很多时候是对多张表的操作。
+（重要的其实是在怎么样用sql语句来实现查询）
+1、连接池：我们在实际开发中都会使用连接池。因为它可以减少我们获取连接所消耗的时间。
+2、mybatis中的连接池mybat
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-31
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -752,11 +962,12 @@ Servlet过滤器（Filter）就可以实现上述要求。过滤器位于服务�
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JavaWeb-Filter/">
-                        <span class="chip bg-color">JavaWeb Filter</span>
+                    <a href="/tags/Mybatis/">
+                        <span class="chip bg-color">Mybatis</span>
                     </a>
                     
                 </div>
@@ -770,28 +981,25 @@ Servlet过滤器（Filter）就可以实现上述要求。过滤器位于服务�
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/29/c3p0%E8%BF%9E%E6%8E%A5%E6%B1%A0%E4%B8%8EDBUtil%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8/">
+                <a href="/2020/05/12/Mybatis%E6%A1%86%E6%9E%B6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="c3p0连接池与DBUtil工具应用">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Mybatis框架">
                         
-                        <span class="card-title">c3p0连接池与DBUtil工具应用</span>
+                        <span class="card-title">Mybatis框架</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            数据库连接池的作用：转载：https://www.cnblogs.com/tangdrogn/p/8177754.html
-使用c3p0连接池需要以下步骤：
-下载c3p0-0.9.2.1.jar 包
-
-配置c3p0-config.xml文件
+                            1、什么是框架？​    它是我们软件开发中的一套解决方案，不同的框架解决的是不同的问题。    使用框架的好处：        框架封装了很多的细节，使开发者可以使用极简的方式实现功能。大大提高开发效率。
+2、三层架构表现层：​     
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-12
                             </span>
                         <span class="publish-author">
                             
@@ -804,8 +1012,8 @@ Servlet过滤器（Filter）就可以实现上述要求。过滤器位于服务�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93-c3p0/">
-                        <span class="chip bg-color">数据库 c3p0</span>
+                    <a href="/tags/Mybatis/">
+                        <span class="chip bg-color">Mybatis</span>
                     </a>
                     
                 </div>
@@ -982,7 +1190,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.4k</span>&nbsp;字
+                class="white-color">7.2k</span>&nbsp;字
             
             
             
