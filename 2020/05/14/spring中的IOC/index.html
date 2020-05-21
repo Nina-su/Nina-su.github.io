@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="MVC开发模式, Nina">
-    <meta name="description" content="什么是MVC？MVC全名是Model View Controller，是模型(model)-视图(view)-控制器(controller)的缩写，一种软件设计典范，用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑聚集到一个部件">
+    <meta name="keywords" content="spring中的IOC, Nina">
+    <meta name="description" content="1、spring是什么Spring是分层的 Java SE/EE应用 full-stack 轻量级开源框架，以 IoC（Inverse Of Control： 反转控制）和 AOP（Aspect Oriented Programming：面">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>MVC开发模式 | Nina</title>
+    <title>spring中的IOC | Nina</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -303,12 +303,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">MVC开发模式</h1>
+                    <h1 class="description center-align post-title">spring中的IOC</h1>
                 </div>
             </div>
         </div>
@@ -425,8 +425,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/mvc/">
-                                <span class="chip bg-color">mvc</span>
+                            <a href="/tags/Spring/">
+                                <span class="chip bg-color">Spring</span>
                             </a>
                         
                     </div>
@@ -441,28 +441,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-04-09
+                    2020-05-14
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2020-05-12
+                    2020-05-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    706
+                    3.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    2 Min
+                    13 Min
                 </div>
                 
 
@@ -478,16 +478,332 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="什么是MVC？"><a href="#什么是MVC？" class="headerlink" title="什么是MVC？"></a>什么是MVC？</h3><p>MVC全名是Model View Controller，是模型(model)-视图(view)-控制器(controller)的缩写，一种软件设计典范，用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑聚集到一个部件里面，在改进和个性化定制界面及用户交互的同时，不需要重新编写业务逻辑。MVC被独特的发展起来用于映射传统的输入、处理和输出功能在一个逻辑的图形化用户界面的结构中。 </p>
-<h4 id="Model层："><a href="#Model层：" class="headerlink" title="Model层："></a>Model层：</h4><p>其中包含了<strong><em>DAO</em></strong>与<strong><em>Service</em></strong>，Dao负责的是与数据库的交互，也就是进行数据的<strong>增删改查</strong>。Service是对Dao的<strong>进一步封装</strong>，因为Dao层只是进行增删改查的功能，Service把需要得到信息或者要进行的一些插入、删除、修改的元素告诉Dao，调用完Dao里的方法后返回一个结果集。（service也可称为业务逻辑层）</p>
-<h4 id="Controller层："><a href="#Controller层：" class="headerlink" title="Controller层："></a>Controller层：</h4><p>也就是控制层，是应用程序中处理用户交互的部分，与view层紧密联系。</p>
-<h4 id="view层："><a href="#view层：" class="headerlink" title="view层："></a>view层：</h4><p>那就是视图层，后台数据展现我们浏览器上。</p>
-<h3 id="MVC开发模式的一些优点："><a href="#MVC开发模式的一些优点：" class="headerlink" title="MVC开发模式的一些优点："></a>MVC开发模式的一些优点：</h3><h4 id="耦合性低"><a href="#耦合性低" class="headerlink" title="耦合性低"></a>耦合性低</h4><p>视图层和业务层分离，这样就允许更改视图层代码而不用重新编译模型和控制器代码，同样，一个应用的业务流程或者业务规则的改变只需要改动MVC的模型层即可。因为模型与控制器和视图相分离，所以很容易改变应用程序的数据层和业务规则。 </p>
-<h4 id="重用性高"><a href="#重用性高" class="headerlink" title="重用性高"></a>重用性高</h4><p>由于已经将数据和业务规则从表示层分开，所以可以最大化的重用代码了。 </p>
-<h4 id="可维护性高"><a href="#可维护性高" class="headerlink" title="可维护性高"></a><strong>可维护性高</strong></h4><p>分离视图层和业务逻辑层也使得WEB应用更易于维护和修改。 </p>
-<h4 id="部署快"><a href="#部署快" class="headerlink" title="部署快"></a><strong>部署快</strong></h4><p>使用MVC模式使开发时间得到相当大的缩减，它使程序员(Java开发人员)集中精力于业务逻辑，界面程序员(HTML和JSP开发人员)集中精力于表现形式上。 </p>
-<h4 id="有利软件工程化管理"><a href="#有利软件工程化管理" class="headerlink" title="有利软件工程化管理"></a><strong>有利软件工程化管理</strong></h4><p>由于不同的层各司其职，每一层不同的应用具有某些相同的特征，有利于通过工程化、工具化管理程序代码。控制器也提供了一个好处，就是可以使用控制器来联接不同的模型和视图去完成用户的需求，这样控制器可以为构造应用程序提供强有力的手段。给定一些可重用的模型和视图，控制器可以根据用户的需求选择模型进行处理，然后选择视图将处理结果显示给用户。 </p>
+                <h2 id="1、spring是什么"><a href="#1、spring是什么" class="headerlink" title="1、spring是什么"></a>1、spring是什么</h2><p>Spring是分层的 Java SE/EE应用 full-stack 轻量级开源框架，以 <strong>IoC</strong>（Inverse Of Control： 反转控制）和 <strong>AOP</strong>（Aspect Oriented Programming：面向切面编程）为内核，提供了<strong>展现层 Spring MVC</strong> 和<strong>持久层 Spring JDBC</strong> 以及<strong>业务层事务管理</strong>等众多的企业级应用技术，还能整合开源世界众多 著名的第三方框架和类库，逐渐成为使用最多的Java EE 企业应用开源框架。 </p>
+<h2 id="2、spring的优势"><a href="#2、spring的优势" class="headerlink" title="2、spring的优势"></a>2、spring的优势</h2><ul>
+<li><p><strong>方便解耦，简化开发</strong> </p>
+<p>​    通过 Spring提供的 IoC容器，可以将对象间的依赖关系交由 Spring进行控制，避免硬编码所造 成的过度程序耦合。用户也不必再为单例模式类、属性文件解析等这些很底层的需求编写代码，可 以更专注于上层的应用。</p>
+</li>
+<li><p><strong>AOP编程的支持</strong> </p>
+</li>
+<li><p><strong>声明式事务的支持</strong> </p>
+<p>可以将我们从单调烦闷的事务管理代码中解脱出来，通过声明式方式灵活的进行事务的管理， 提高开发效率和质量。 </p>
+</li>
+<li><p><strong>方便程序的测试</strong> </p>
+</li>
+<li><p><strong>方便集成各种优秀框架</strong> </p>
+<p>Spring可以降低各种框架的使用难度，提供了对各种优秀框架（Struts、Hibernate、Hessian、Quartz 等）的直接支持。 </p>
+</li>
+<li><p><strong>降低 JavaEE API的使用难度</strong> </p>
+</li>
+<li><p><strong>Java源码是经典学习范例</strong> </p>
+</li>
+</ul>
+<h2 id="3、IOC（控制反转）"><a href="#3、IOC（控制反转）" class="headerlink" title="3、IOC（控制反转）"></a>3、IOC（控制反转）</h2><h3 id="程序的耦合："><a href="#程序的耦合：" class="headerlink" title="程序的耦合："></a>程序的耦合：</h3><p>在软件工程中，耦合指的就是就是对象之间的依赖性。对象之间的耦合越高，维护成本越高。因此对象的设计<br>应使类和构件之间的耦合最小。软件设计中通常用耦合度和内聚度作为衡量模块独立程度的标准。划分模块的一个 准则就是高内聚低耦合。 </p>
+<h3 id="控制反转："><a href="#控制反转：" class="headerlink" title="控制反转："></a>控制反转：</h3><p>控制反转(Inversion of Control，英文缩写为IoC)是框架的重要特征，如果程序员清楚框架和工具箱的差别，可以无视本术语。</p>
+<p>可以使用C语言设计框架，因此，IoC并非面向对象编程的专用术语。它包括依赖注入（Dependency Injection，简称DI）和依赖查找（Dependency Lookup）。</p>
+<h3 id="明确Ioc的作用："><a href="#明确Ioc的作用：" class="headerlink" title="明确Ioc的作用："></a>明确Ioc的作用：</h3><p>削减计算机程序的耦合(解除我们代码中的依赖关系)</p>
+<h2 id="4、使用spring的IOC解决程序耦合"><a href="#4、使用spring的IOC解决程序耦合" class="headerlink" title="4、使用spring的IOC解决程序耦合"></a>4、使用spring的IOC解决程序耦合</h2><h4 id="程序间的依赖关系"><a href="#程序间的依赖关系" class="headerlink" title="程序间的依赖关系"></a>程序间的依赖关系</h4><h5 id="包括："><a href="#包括：" class="headerlink" title="包括："></a>包括：</h5><p>类之间的依赖</p>
+<p>方法间的依赖</p>
+<h5 id="解耦："><a href="#解耦：" class="headerlink" title="解耦："></a>解耦：</h5><p>降低程序间的依赖关系</p>
+<h5 id="实际开发中："><a href="#实际开发中：" class="headerlink" title="实际开发中："></a>实际开发中：</h5><p>应该做到：编译期不依赖，运行时才依赖。</p>
+<h5 id="解耦的思路："><a href="#解耦的思路：" class="headerlink" title="解耦的思路："></a>解耦的思路：</h5><ul>
+<li><p>第一步：使用反射来创建对象，而避免使用new关键字。</p>
+</li>
+<li><p>第二步：通过读取配置文件来获取要创建的对象全限定类名</p>
+</li>
+</ul>
+<h4 id="基于xml的配置（入门案例）maven工程中"><a href="#基于xml的配置（入门案例）maven工程中" class="headerlink" title="基于xml的配置（入门案例）maven工程中"></a>基于xml的配置（入门案例）maven工程中</h4><h5 id="1、准备spring的开发包"><a href="#1、准备spring的开发包" class="headerlink" title="1、准备spring的开发包"></a>1、准备spring的开发包</h5><p>可建立maven工程导入spring的坐标</p>
+<p><code>&lt;dependency&gt;        &lt;groupId&gt;org.springframework&lt;/groupId&gt;        &lt;artifactId&gt;spring-context&lt;/artifactId&gt;        &lt;version&gt;5.0.2.RELEASE&lt;/version&gt;&lt;/dependency&gt;</code></p>
+<h5 id="2、创建业务层接口（IAccountService-java）和实现类（AccountServiceImpl-java）"><a href="#2、创建业务层接口（IAccountService-java）和实现类（AccountServiceImpl-java）" class="headerlink" title="2、创建业务层接口（IAccountService.java）和实现类（AccountServiceImpl.java）"></a>2、创建业务层接口（IAccountService.java）和实现类（AccountServiceImpl.java）</h5><h5 id="3、创建持久层接口（IAccountDao-java）和实现类（AccountDaoImpl-java）"><a href="#3、创建持久层接口（IAccountDao-java）和实现类（AccountDaoImpl-java）" class="headerlink" title="3、创建持久层接口（IAccountDao.java）和实现类（AccountDaoImpl.java）"></a>3、创建持久层接口（IAccountDao.java）和实现类（AccountDaoImpl.java）</h5><h5 id="3、maven工程下resource目录下创建任意名称的xml文件（不能是中文）"><a href="#3、maven工程下resource目录下创建任意名称的xml文件（不能是中文）" class="headerlink" title="3、maven工程下resource目录下创建任意名称的xml文件（不能是中文）"></a>3、maven工程下resource目录下创建任意名称的xml文件（不能是中文）</h5><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+
+        http://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
+
+&lt;!-- bean 标签：用于配置让 spring 创建对象，并且存入 ioc 容器之中      
+    id 属性：对象的唯一标识。      
+    class 属性：指定要创建对象的全限定类名 --&gt;
+&lt;!-- 配置 service --&gt;  
+&lt;bean id=&quot;accountService&quot; class=&quot;com.slx.service.impl.AccountServiceImpl&quot;&gt;&lt;/bean&gt;
+&lt;!-- 配置 dao --&gt; 
+&lt;bean id=&quot;accountDao&quot; class=&quot;com.slx.dao.impl.AccountDaoImpl&quot;&gt;&lt;/bean&gt;
+&lt;/beans&gt;</code></pre><h5 id="4、测试配置是否成功"><a href="#4、测试配置是否成功" class="headerlink" title="4、测试配置是否成功"></a>4、测试配置是否成功</h5><pre><code>/**
+
+- 模拟一个表现层，用于调用业务层
+  */
+  public class Client {
+  //获取spring的IOC核心容器，根据id获取对象
+  public static void main(String[] args) {
+      //1、获取核心容器对象
+    //  ApplicationContext ac = new ClassPathXmlApplicationContext(&quot;bean.xml&quot;);
+      ClassPathXmlApplicationContext ac = new ClassPathXmlApplicationContext(&quot;bean.xml&quot;);
+      //2、根据id获取bean对象
+      IAccountService as = (IAccountService) ac.getBean(&quot;accountServiceImpl&quot;);
+      System.out.println(as);
+
+}
+}</code></pre><h4 id="bean标签"><a href="#bean标签" class="headerlink" title="bean标签"></a>bean标签</h4><h5 id="作用："><a href="#作用：" class="headerlink" title="作用："></a>作用：</h5><p>用于配置对象让 spring 来创建的。 </p>
+<p>默认情况下它调用的是类中的无参构造函数。如果没有无参构造函数则不能创建成功（上列所示）</p>
+<h5 id="属性："><a href="#属性：" class="headerlink" title="属性："></a>属性：</h5><p>id：给对象在容器中提供一个唯一标识。用于获取对象。</p>
+<p>class：指定类的全限定类名。用于反射创建对象。默认情况下调用无参构造函数。</p>
+<p>scope：指定对象的作用范围。    </p>
+<ul>
+<li>singleton :默认值，单例的.   </li>
+<li>prototype :多例的.   </li>
+<li>request :WEB 项目中,Spring 创建一个 Bean 的对象,将对象存入到 request 域中.  </li>
+<li>session :WEB 项目中,Spring 创建一个 Bean 的对象,将对象存入到 session 域中.   </li>
+<li>global session :WEB 项目中,应用在 Portlet 环境.如果没有 Portlet 环境那么globalSession 相当于 session. </li>
+</ul>
+<p>init-method：指定类中的初始化方法名称。 </p>
+<p>destroy-method：指定类中销毁方法名称。</p>
+<h5 id="作用范围和生命周期："><a href="#作用范围和生命周期：" class="headerlink" title="作用范围和生命周期："></a>作用范围和生命周期：</h5><ul>
+<li><p>单例对象：<strong>scope=”singleton”</strong>   </p>
+<p>一个应用只有一个对象的实例。它的作用范围就是整个引用。   </p>
+<p>生命周期：    </p>
+<p>对象出生：当应用加载，创建容器时，对象就被创建了。    </p>
+<p>对象活着：只要容器在，对象一直活着。    </p>
+<p>对象死亡：当应用卸载，销毁容器时，对象就被销毁了。  </p>
+</li>
+<li><p>多例对象：<strong>scope=”prototype”</strong>   </p>
+<p>每次访问对象时，都会重新创建对象实例。  </p>
+<p>生命周期：    </p>
+<p>对象出生：当使用对象时，创建新的对象实例。    </p>
+<p>对象活着：只要对象在使用中，就一直活着。   </p>
+<p>对象死亡：当对象长时间不用时，被 java 的垃圾回收器回收了。</p>
+</li>
+</ul>
+<h4 id="实例化bean标签的三种方式"><a href="#实例化bean标签的三种方式" class="headerlink" title="实例化bean标签的三种方式"></a>实例化bean标签的三种方式</h4><ol>
+<li><p>使用默认的无参构造函数</p>
+<p>（在默认情况下：   它会根据默认无参构造函数来创建类对象。如果 bean 中没有默认无参构造函数，将会创建失败）</p>
+<p><code>&lt;bean id=&quot;accountService&quot; class=&quot;com.slx.service.impl.AccountServiceImpl&quot;/&gt;</code></p>
+</li>
+<li><p>spring管理静态工厂-使用静态工厂的方法创建对象</p>
+<p><code>public class StaticFactory {</code></p>
+<p> <code>public static IAccountService createAccountService(){</code></p>
+<p> <code>return new AccountServiceImpl();</code> </p>
+<p> <code>}</code></p>
+<p> <code>}</code></p>
+<p>使用 StaticFactory 类中的静态方法 createAccountService 创建对象，并存入 spring 容器 </p>
+<p>id 属性：指定 bean 的 id，用于从容器中获取 </p>
+<p>class 属性：指定静态工厂的全限定类名   </p>
+<p>factory-method 属性：指定生产对象的静态方法 </p>
+<p>`<bean id="accountService"  class="com.slx.factory.StaticFactory"     factory-method="createAccountService"></p>
+<p></bean> `</p>
+</li>
+</ol>
+<ol start="3">
+<li><p>spring管理实例工厂-使用实例工厂的方法创建对象 </p>
+<p>此种方式是：</p>
+<p>先把工厂的创建交给 spring 来管理。   </p>
+<p>然后在使用工厂的 bean 来调用里面的方法   </p>
+<p>factory-bean 属性：用于指定实例工厂 bean 的 id。   </p>
+<p>factory-method 属性：用于指定实例工厂中创建对象的方法。 </p>
+<p><code>public class InstanceFactory {</code></p>
+<p> <code>public IAccountService createAccountService(){</code> </p>
+<p> <code>return new AccountServiceImpl();</code></p>
+<p> <code>}</code> </p>
+<p> <code>}</code></p>
+<p>配置xml：</p>
+<p><code>&lt;bean id=&quot;instancFactory&quot; class=&quot;com.slx.factory.InstanceFactory&quot;&gt;</code> <code>&lt;/bean&gt;</code></p>
+<p> <code>&lt;bean id=&quot;accountService&quot;  factory-bean=&quot;instancFactory&quot;  factory-method=&quot;createAccountService&quot;&gt;&lt;/bean&gt;</code></p>
+</li>
+</ol>
+<h4 id="spring的依赖注入"><a href="#spring的依赖注入" class="headerlink" title="spring的依赖注入"></a>spring的依赖注入</h4><h5 id="什么是依赖注入？"><a href="#什么是依赖注入？" class="headerlink" title="什么是依赖注入？"></a>什么是依赖注入？</h5><p>依赖注入：Dependency Injection。它是 spring 框架核心 ioc 的具体实现。 </p>
+<p>我们的程序在编写时，通过控制反转，把对象的创建交给了 spring，但是代码中不可能出现没有依赖的情况。 ioc 解耦只是降低他们的依赖关系，但不会消除。例如：我们的业务层仍会调用持久层的方法。</p>
+<p>那这种业务层和持久层的依赖关系，在使用 spring 之后，就让 spring 来维护了。</p>
+<p>简单的说，就是坐等框架把持久层对象传入业务层，而不用我们自己去获取。</p>
+<h5 id="构造函数注入"><a href="#构造函数注入" class="headerlink" title="构造函数注入"></a>构造函数注入</h5><p>就是使用类中的构造函数，给成员变量赋值。注意，赋值的操作不是我们自己做的，而是通过配置<br>的方式，让 spring 框架来为我们注入。</p>
+<pre><code>private String name; 
+
+private Integer age;  
+
+private Date birthday;     
+
+public AccountServiceImpl(String name, Integer age, Date birthday) {   this.name = name;  
+
+this.age = age;   
+
+this.birthday = birthday;  
+
+} 
+
+ @Override  
+
+ public void saveAccount() {   System.out.println(name+&quot;,&quot;+age+&quot;,&quot;+birthday);   
+
+ } } 
+
+//xml中注入
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+
+  xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+
+   xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
+
+   xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+
+    http://www.springframework.org/schema/context
+
+    http://www.springframework.org/schema/context/spring-context.xsd&quot;&gt;
+
+&lt;bean id=&quot;accountService&quot; class=&quot;com.slx.service.impl.AccountServiceImpl&quot;&gt; 
+
+     &lt;constructor-arg name=&quot;name&quot; value=&quot; 张三 &quot;&gt;&lt;/constructor-arg&gt;  
+
+     &lt;constructor-arg name=&quot;age&quot; value=&quot;18&quot;&gt;&lt;/constructor-arg&gt; 
+
+     &lt;constructor-arg name=&quot;birthday&quot; ref=&quot;now&quot;&gt;&lt;/constructor-arg&gt; &lt;/bean&gt; 
+
+&lt;bean id=&quot;now&quot; class=&quot;java.util.Date&quot;&gt;&lt;/bean&gt; 
+&lt;/beans&gt;</code></pre><h5 id="set-方法注入"><a href="#set-方法注入" class="headerlink" title="set 方法注入"></a>set 方法注入</h5><p>就是在类中提供需要注入成员的 set 方法。具体代码如下： </p>
+<pre><code>public class AccountServiceImpl implements IAccountService {   
+
+    private String name; 
+
+    private Integer age; 
+
+    private Date birthday;    
+
+    public void setName(String name) {  
+
+    this.name = name; 
+
+    }  
+
+    public void setAge(Integer age) {   
+
+    this.age = age;  
+
+    }  
+
+    public void setBirthday(Date birthday) {   
+
+    this.birthday = birthday; 
+
+    } 
+
+ @Override  public void saveAccount() {   
+
+     System.out.println(name+&quot;,&quot;+age+&quot;,&quot;+birthday);   
+
+     } 
+
+ } `
+
+//xml文件里配置
+
+&lt;!-- 通过配置文件给 bean 中的属性传值：使用 set 方法的方式  涉及的标签：           property 
+
+ 属性：    
+
+ name：找的是类中 set 方法后面的部分    
+
+ ref：给属性赋值是其他 bean 类型的    
+
+ value：给属性赋值是基本数据类型和 string 类型的 
+
+ 实际开发中，此种方式用的较多。 --&gt; 
+
+&lt;bean id=&quot;accountService&quot; class=&quot;com.slx.service.impl.AccountServiceImpl&quot;&gt;   
+
+     &lt;property name=&quot;name&quot; value=&quot;test&quot;&gt;&lt;/property&gt; 
+
+      &lt;property name=&quot;age&quot; value=&quot;21&quot;&gt;&lt;/property&gt;  
+
+      &lt;property name=&quot;birthday&quot; ref=&quot;now&quot;&gt;&lt;/property&gt; 
+
+&lt;/bean&gt; 
+
+&lt;bean id=&quot;now&quot; class=&quot;java.util.Date&quot;&gt;&lt;/bean&gt; </code></pre><h5 id="使用-p-名称空间注入数据（本质还是调用-set-方法）"><a href="#使用-p-名称空间注入数据（本质还是调用-set-方法）" class="headerlink" title="使用 p 名称空间注入数据（本质还是调用 set 方法）"></a>使用 p 名称空间注入数据（本质还是调用 set 方法）</h5><p>此种方式是通过在 xml中导入 p名称空间，使用 p:propertyName 来注入数据，它的本质仍然是调用类中的 set 方法实现注入功能。 </p>
+<pre><code>&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot; 
+     xmlns:p=&quot;http://www.springframework.org/schema/p&quot; 
+     xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
+     xsi:schemaLocation=&quot; http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt; 
+    &lt;bean id=&quot;accountService&quot;   class=&quot;com.slx.service.impl.AccountServiceImpl4&quot;     p:name=&quot;test&quot; p:age=&quot;21&quot; p:birthday-ref=&quot;now&quot;/&gt; 
+&lt;/beans&gt;</code></pre><h5 id="注入集合属性"><a href="#注入集合属性" class="headerlink" title="注入集合属性"></a>注入集合属性</h5><p>就是给类中的集合成员传值，它用的也是set方法注入的方式，只不过变量的数据类型都是集合。这里介绍注入数组，List,Set,Map,Properties。</p>
+<pre><code>public class AccountServiceImpl implements IAccountService { 
+    private String[] myStrs; 
+    private List&lt;String&gt; myList;  
+    private Set&lt;String&gt; mySet; 
+    private Map&lt;String,String&gt; myMap; 
+    private Properties myProps;    
+    public void setMyStrs(String[] myStrs) {   
+    this.myStrs = myStrs;  }  
+    public void setMyList(List&lt;String&gt; myList) {   
+    this.myList = myList;  
+    }  
+    public void setMySet(Set&lt;String&gt; mySet) {   
+    this.mySet = mySet;  
+    }  
+    public void setMyMap(Map&lt;String, String&gt; myMap) {   
+    this.myMap = myMap;  
+    }  
+    public void setMyProps(Properties myProps) {   
+    this.myProps = myProps; 
+    } 
+
+     @Override  public void saveAccount() {                          
+     System.out.println(Arrays.toString(myStrs));  
+     System.out.println(myList);  
+     System.out.println(mySet);   
+     System.out.println(myMap); 
+     System.out.println(myProps); 
+       } 
+ } 
+
+ //xml里配置
+ &lt;!-- 注入集合数据    
+ List 结构的：   array,list,set 
+ Map 结构的   map,entry,props,prop 
+    --&gt; 
+&lt;bean id=&quot;accountService&quot; class=&quot;com.slx.service.impl.AccountServiceImpl&quot;&gt; 
+ &lt;!-- 在注入集合数据时，只要结构相同，标签可以互换 --&gt;  &lt;!-- 给数组注入数据 --&gt;  
+ &lt;property name=&quot;myStrs&quot;&gt; 
+  &lt;set&gt;    
+  &lt;value&gt;AAA&lt;/value&gt;    
+  &lt;value&gt;BBB&lt;/value&gt;   
+  &lt;value&gt;CCC&lt;/value&gt;   &lt;/set&gt; 
+ &lt;/property&gt; 
+ &lt;!-- 注入 list 集合数据 --&gt;  
+ &lt;property name=&quot;myList&quot;&gt;   
+     &lt;array&gt;   
+         &lt;value&gt;AAA&lt;/value&gt;    
+         &lt;value&gt;BBB&lt;/value&gt;   
+         &lt;value&gt;CCC&lt;/value&gt;   
+         &lt;/array&gt;  &lt;/property&gt; 
+ &lt;!-- 注入 set 集合数据 --&gt;  
+ &lt;property name=&quot;mySet&quot;&gt; 
+     &lt;list&gt;    
+      &lt;value&gt;AAA&lt;/value&gt;   
+      &lt;value&gt;BBB&lt;/value&gt;   
+      &lt;value&gt;CCC&lt;/value&gt;  
+     &lt;/list&gt;  
+ &lt;/property&gt; 
+ &lt;!-- 注入 Map 数据 --&gt;  
+ &lt;property name=&quot;myMap&quot;&gt;  
+ &lt;props&gt; 
+   &lt;prop key=&quot;testA&quot;&gt;aaa&lt;/prop&gt;    
+   &lt;prop key=&quot;testB&quot;&gt;bbb&lt;/prop&gt;   
+   &lt;/props&gt; 
+ &lt;/property&gt; 
+ &lt;!-- 注入 properties 数据 --&gt; 
+ &lt;property name=&quot;myProps&quot;&gt; 
+  &lt;map&gt;    
+      &lt;entry key=&quot;testA&quot; value=&quot;aaa&quot;&gt;&lt;/entry&gt; 
+      &lt;entry key=&quot;testB&quot;&gt;&lt;value&gt;bbb&lt;/value&gt; &lt;/entry&gt;  
+  &lt;/map&gt; 
+ &lt;/property&gt; 
+&lt;/bean&gt;</code></pre>
             </div>
             <hr/>
 
@@ -512,7 +828,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/04/09/MVC%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F/">http://yoursite.com/2020/04/09/MVC%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F/</a>
+                    <a href="http://yoursite.com/2020/05/14/spring%E4%B8%AD%E7%9A%84IOC/">http://yoursite.com/2020/05/14/spring%E4%B8%AD%E7%9A%84IOC/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -550,8 +866,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/mvc/">
-                                    <span class="chip bg-color">mvc</span>
+                                <a href="/tags/Spring/">
+                                    <span class="chip bg-color">Spring</span>
                                 </a>
                             
                         </div>
@@ -717,30 +1033,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2020/05/12/Mybatis%E6%A1%86%E6%9E%B6/">
+                <a href="/2020/05/14/spring%E4%B8%AD%E7%9A%84IOC/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Mybatis框架">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="spring中的IOC">
                         
-                        <span class="card-title">Mybatis框架</span>
+                        <span class="card-title">spring中的IOC</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1、什么是框架？​    它是我们软件开发中的一套解决方案，不同的框架解决的是不同的问题。    使用框架的好处：        框架封装了很多的细节，使开发者可以使用极简的方式实现功能。大大提高开发效率。
-2、三层架构表现层：​     
+                            1、spring是什么Spring是分层的 Java SE/EE应用 full-stack 轻量级开源框架，以 IoC（Inverse Of Control： 反转控制）和 AOP（Aspect Oriented Programming：面
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -749,11 +1065,12 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Mybatis/">
-                        <span class="chip bg-color">Mybatis</span>
+                    <a href="/tags/Spring/">
+                        <span class="chip bg-color">Spring</span>
                     </a>
                     
                 </div>
@@ -767,25 +1084,27 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/04/04/HashMap%E7%9A%84%E4%BD%BF%E7%94%A8%E5%88%9D%E8%A7%A3/">
+                <a href="/2020/05/12/Mybatis%E4%B8%AD%E7%9A%84%E5%A4%9A%E8%A1%A8%E6%93%8D%E4%BD%9C/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="HashMap的使用（初解）">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Mybatis中的多表操作">
                         
-                        <span class="card-title">HashMap的使用（初解）</span>
+                        <span class="card-title">Mybatis中的多表操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Java中HashMap的工作原理是什么？hashMap是基于哈希表的Map接口的实现。
-Java中的hashMap是以键值对（key-value）的形式存储元素的。HashMap需要一个hash函数，它使用hashCode()和equal
+                            当我们在开发过程中，涉及到数据库操作时，很多时候是对多张表的操作。
+（重要的其实是在怎么样用sql语句来实现查询）
+1、连接池：我们在实际开发中都会使用连接池。因为它可以减少我们获取连接所消耗的时间。
+2、mybatis中的连接池mybat
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-12
                             </span>
                         <span class="publish-author">
                             
@@ -798,8 +1117,8 @@ Java中的hashMap是以键值对（key-value）的形式存储元素的。HashMa
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java-HashMap/">
-                        <span class="chip bg-color">Java HashMap</span>
+                    <a href="/tags/Mybatis/">
+                        <span class="chip bg-color">Mybatis</span>
                     </a>
                     
                 </div>
