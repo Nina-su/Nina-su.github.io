@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ACL的使用, Nina">
-    <meta name="description" content="ACL的使用 | Nina">
+    <meta name="keywords" content="路由器的访问控制ACL, Nina">
+    <meta name="description" content="访问控制列表(ACL)的工作原理ACL使用包过滤技术，在路由器上读取OSI七层模型的第3层和第4层报头中的信息。如源地址，目标地址，源端口，目标端口等，根据预先定义好的规则，对包进行过滤，从而达到访问控制的目的。
+ACl是一组规则的集合，它">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>ACL的使用 | Nina</title>
+    <title>路由器的访问控制ACL | Nina</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -303,12 +304,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">ACL的使用</h1>
+                    <h1 class="description center-align post-title">路由器的访问控制ACL</h1>
                 </div>
             </div>
         </div>
@@ -423,9 +424,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                                <span class="chip bg-color">网络安全</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -451,7 +456,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    0
+                    349
                 </div>
                 
 
@@ -474,7 +479,20 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h3 id="访问控制列表-ACL-的工作原理"><a href="#访问控制列表-ACL-的工作原理" class="headerlink" title="访问控制列表(ACL)的工作原理"></a>访问控制列表(ACL)的工作原理</h3><p>ACL使用包过滤技术，在路由器上读取OSI七层模型的第3层和第4层报头中的信息。如源地址，目标地址，源端口，目标端口等，根据预先定义好的规则，对包进行过滤，从而达到访问控制的目的。</p>
+<p>ACl是一组规则的集合，它应用在路由器的某个接口上。对路由器接口而言，访问控制列表有两个方向。</p>
+<p>出：已经过路由器的处理，正离开路由器的数据包。</p>
+<p>入：已到达路由器接口的数据包。将被路由器处理。</p>
+<p>如果对路由器的某接口应用了ACL，那么路由器对数据包应用该组规则进行顺序匹配，使用匹配即停止的，不匹配则使用默认规则的方式来过滤数据包。</p>
+<h3 id="标准ACL"><a href="#标准ACL" class="headerlink" title="标准ACL"></a>标准ACL</h3><p>标准访问控制列表：根据数据包的源IP地址来允许或拒绝数据包，标准访问控制列表的访问控制列表号是1-99。</p>
+<p>扩展</p>
+<p>创建网络拓扑结构：</p>
+<p><img src="ACL%E7%9A%84%E4%BD%BF%E7%94%A8.assets/1606457128164.png" alt="1606457128164"></p>
+<p><img src="ACL%E7%9A%84%E4%BD%BF%E7%94%A8.assets/1606457263224.png" alt="1606457263224"></p>
+<p><img src="ACL%E7%9A%84%E4%BD%BF%E7%94%A8.assets/1606457291736.png" alt="1606457291736"></p>
+<p><img src="ACL%E7%9A%84%E4%BD%BF%E7%94%A8.assets/1606457400865.png" alt="1606457400865"></p>
+<p>扩展访问控制列表：根据数据包的源IP地址，目的IP地址，指定协议，端口和标志，来允许或拒绝数据包。扩展访问控制列表的访问控制列表号是100-199</p>
+
             </div>
             <hr/>
 
@@ -536,7 +554,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
+                                    <span class="chip bg-color">网络安全</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -960,7 +982,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">14.9k</span>&nbsp;字
+                class="white-color">19.2k</span>&nbsp;字
             
             
             
